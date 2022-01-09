@@ -162,7 +162,9 @@ void Display_Result(const E_Game_Result & game_result)
     // Count the pawns
     else
     {
-        // TODO
+        auto pawns = othellier->Count_All_Pawns();
+        std::cout << "Player 1's pawns : " << pawns.first  << std::endl
+                  << "Player 2's pawns : " << pawns.second << std::endl;
     }
 
     // Wait for any user input before closing the terminal
