@@ -10,6 +10,7 @@
 #include "slot.h"
 
 #include <array>
+#include <utility>
 
 /********************************************************************************************************************************************************************/
 /********************************************************************************************************************************************************************/
@@ -35,6 +36,9 @@ class Othellier
         bool Can_Play(const Pawn & pawn) const noexcept;
         void Reset_Othellier(void) noexcept;
         void Draw_Othellier(void) const noexcept;
+        std::pair<unsigned int, unsigned int> Count_Pawns(void) const noexcept;
+        std::pair<unsigned int, unsigned int> Count_All_Pawns(void) const noexcept;
+
 
     protected:
         bool Check_Pawn_Position_is_Valid(const unsigned int position_x, const unsigned int position_y) const noexcept;
@@ -50,7 +54,7 @@ class Othellier
         bool Try_to_Switch_in_Down_Left_Direction(const unsigned int position_x, const unsigned int position_y, const Pawn & pawn) noexcept;
         bool Try_to_Switch_in_Down_Right_Direction(const unsigned int position_x, const unsigned int position_y, const Pawn & pawn) noexcept;
 
-        // Functions used by Player::Can_Play :
+        // Functions used by Othellier::Can_Play :
         bool Try_to_Play_in_Up_Direction(const unsigned int position_x, const unsigned int position_y, const Pawn & pawn) const noexcept;
         bool Try_to_Play_in_Down_Direction(const unsigned int position_x, const unsigned int position_y, const Pawn & pawn) const noexcept;
         bool Try_to_Play_in_Left_Direction(const unsigned int position_x, const unsigned int position_y, const Pawn & pawn) const noexcept;
