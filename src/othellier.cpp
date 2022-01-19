@@ -476,22 +476,25 @@ bool Othellier::Can_Play(const Pawn & pawn) const noexcept
     bool result{false};
 
     // Check there is at least one pawn
-    bool no_more_pawn{false};
+    /*bool no_more_pawn{false};
     unsigned int i{0};
     unsigned int j{0};
 
     for (; i < NUMBER_ROWS && j < NUMBER_COLUMNS; ++i, ++j)
     {
-        if (_othellier[i][j].Get_Pawn_Color() == pawn.Get_Color())
+        if (!_othellier[i][j].Is_Empty())
         {
-            no_more_pawn = true;
+            if (_othellier[i][j].Get_Pawn_Color() == pawn.Get_Color())
+            {
+                no_more_pawn = true;
+            }
         }
     }
 
-    if (!no_more_pawn)
+    if (no_more_pawn)
     {
         return false;
-    }
+    }*/
 
     // Check possibilities to play
     for (unsigned int position_x{MIN_INDEX}; position_x < NUMBER_ROWS; ++position_x)
