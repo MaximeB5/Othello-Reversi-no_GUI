@@ -28,3 +28,4 @@ The GUI repository will be cross-platform, so don't worry !
 * Add an IA bot player
 * Maybe finish the display result function in main.cpp, I don't remember if I finished it for the pawns counter.
 * Create the GUI project
+* There are some overflows to be solved during the research of possible playable pawns
